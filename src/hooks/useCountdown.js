@@ -1,6 +1,6 @@
-export const useCountdown = (targetDate) => {
-  return timeLeft;
-};
+// export const useCountdown = (targetDate) => {
+//   return timeLeft;
+// };
 
 export const useCountdown = () =>{
   const targetDate = new Date("2026-08-25T00:00:00");
