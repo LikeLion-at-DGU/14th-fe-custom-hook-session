@@ -22,5 +22,5 @@ export const useWindowSize = () => {
         };
     }, []);
 
-    return windowSize;
+    return {windowSize};
 };

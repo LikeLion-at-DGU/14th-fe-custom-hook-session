@@ -4,7 +4,7 @@ import { useWindowSize } from "../hooks/useWindowSize";
 
 export const WindowSize = () => {
   // 실습 1. 하단 코드를 useWindowSize (커스텀 훅으로 바꿔주세요!)
-  const windowsize = useWindowSize();
+  const {windowSize} = useWindowSize();
 
   const goBack = useGoBack();
   return (
