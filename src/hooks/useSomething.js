@@ -1,7 +1,21 @@
-export const useSomething = () => {
+import { useState, useEffect } from "react";
+
+export const useBackgroundColor = (initialColor) => {
   // 여러분의 use{Something}을 만들어주세요!
   // 정답은 없습니다. 커스텀훅의 필요성을 스스로 느껴보세요.
   // 아이디어를 생각하고, 스스로 구현하다가 어려우면 손 들어주세요!
+  const [color, setColor] = useState(initialColor);
+
+  useEffect(() => {
+    const previousColor = document.body.style.backgroundColor;
+    document.body.style.backgroundColor = color;
+
+    return () => {
+      document.body.style.backgroundColor = previousColor;
+    };
+  }, [color]);
+
+  return [color, setColor];
 };
 
 // export default useSomething;
@@ -20,3 +34,4 @@ export const useSomething = () => {
 //     </div>
 //   );
 // };
+
