@@ -2,9 +2,7 @@ import { useSomething } from "../hooks/useSomething";
 import { useGoBack } from "../hooks/useGoBack";
 
 const YourOwnHook = () => {
-  // const { something... } = useSomething();
-  // 하단 UI에 자유롭게 위에서 받아온 값들을 바인딩 해보세요~
-
+  const { isHovered, hoverProps } = useSomething();
   const goBack = useGoBack();
 
   return (
@@ -12,7 +10,10 @@ const YourOwnHook = () => {
       <button className="back-btn" onClick={goBack}>
         뒤로가기
       </button>
-      <h2 className="main-title">useSomething 실습</h2>
+
+      <h2 {...hoverProps} style={{ fontSize: isHovered ? "50px" : "20px",}}className="main-title">
+        useSomething 실습
+      </h2>
     </div>
   );
 };
