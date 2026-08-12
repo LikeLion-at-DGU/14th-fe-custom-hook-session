@@ -4,7 +4,7 @@ import { useGoBack } from "../hooks/useGoBack";
 const YourOwnHook = () => {
   // const { something... } = useSomething();
   // 하단 UI에 자유롭게 위에서 받아온 값들을 바인딩 해보세요~
-  const [bgColor, setBgColor] = useBackgroundColor('#ffffff');
+  const [bgColor, setBgColor] = useBackgroundColor('#FFE2D2');
 
   const goBack = useGoBack();
 
