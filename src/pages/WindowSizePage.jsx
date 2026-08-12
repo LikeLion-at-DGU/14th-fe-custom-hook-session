@@ -4,8 +4,8 @@ import { useWindowSize } from "../hooks/useWindowSize";
 export const WindowSize = () => {
   // 실습 1. 하단 코드를 useWindowSize (커스텀 훅으로 바꿔주세요!)
   const windowSize = useWindowSize();
-
   const goBack = useGoBack();
+
   return (
     <div className="main-container">
       <button className="back-btn" onClick={goBack}>
