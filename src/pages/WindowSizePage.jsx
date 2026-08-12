@@ -1,27 +1,30 @@
 import { useEffect, useState } from "react";
 import { useGoBack } from "../hooks/useGoBack";
+import { useWindowSize } from "../hooks/useWindowSize";
+
 
 export const WindowSize = () => {
+  const {windowSize} = useWindowSize();
   // 실습 1. 하단 코드를 useWindowSize (커스텀 훅으로 바꿔주세요!)
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
+  // const [windowSize, setWindowSize] = useState({
+  //   width: window.innerWidth,
+  //   height: window.innerHeight,
+  // });
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setWindowSize({
+  //       width: window.innerWidth,
+  //       height: window.innerHeight,
+  //     });
+  //   };
 
-    window.addEventListener("resize", handleResize);
+  //   window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
 
   const goBack = useGoBack();
   return (
