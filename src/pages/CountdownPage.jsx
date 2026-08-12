@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
 import { useGoBack } from "../hooks/useGoBack";
-import { useCountDown } from "../hooks/useCountdown";
+import { useCountdown } from "../hooks/useCountdown";
 
-export const CountDown = () => {
-  const countdown = useCountDown ();
+export const Countdown = () => {
+  const timeLeft = useCountdown ();
   const goBack = useGoBack();
 
   return (
@@ -18,9 +17,5 @@ export const CountDown = () => {
   );
 };
 
+
 export default Countdown;
-
-
-export const CountDown = () => {
-  const countdown = useCountDown ();
-}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const Countdown = () => {
+export const useCountdown = () => {
   const targetDate = new Date("2026-08-25T00:00:00");
 
   const calculateTimeLeft = (targetDate) => {
@@ -27,6 +27,6 @@ export const Countdown = () => {
     return () => clearInterval(timer);
   }, [targetDate]);
 
-  return countdown;
+  return timeLeft;
 
 };
