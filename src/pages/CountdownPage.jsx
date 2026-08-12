@@ -3,7 +3,8 @@ import { useGoBack } from "../hooks/useGoBack";
 import { useCountdown } from "../hooks/useCountdown";
 
 export const Countdown = () => {
-  const timeLeft = useCountdown();
+  const targetDate = new Date("2026-08-25T00:00:00");
+  const timeLeft = useCountdown(targetDate);
 
   const goBack = useGoBack();
 
