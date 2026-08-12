@@ -1,9 +1,9 @@
 //CountdownPage.jsx
 import { useGoBack } from "../hooks/useGoBack";
 import { useCountdown } from "../hooks/useCountdown";
-
 export const Countdown = () => {
-  const timeLeft = useCountdown();
+  const timeLeft= useCountdown(new Date("2026-08-25T00:00:00"));
+
   const goBack = useGoBack();
 
   return (

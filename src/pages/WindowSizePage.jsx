@@ -1,8 +1,9 @@
-import { useWindowSize } from "../hooks/useWindowSize";
 import { useGoBack } from "../hooks/useGoBack";
+import { useWindowSize } from "../hooks/useWindowSize";
 
 export const WindowSize = () => {
-  const { windowSize } = useWindowSize();
+  // 실습 1. 하단 코드를 useWindowSize (커스텀 훅으로 바꿔주세요!)
+  const windowSize = useWindowSize();
   const goBack = useGoBack();
 
   return (
