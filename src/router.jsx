@@ -5,7 +5,7 @@ import WindowSize from "./pages/WindowSizePage";
 import Countdown from "./pages/CountdownPage";
 import Confetti from "./pages/ConfettiPage";
 import { Fetch } from "./pages/FetchPage";
-import YourOwnHook from "./pages/YourOwnHookPage";
+import Fontbig from "./pages/FontbigPage";
 
 const router = createBrowserRouter([
   {
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/your-own-hook",
-        element: <YourOwnHook />,
+        element: <Fontbig />,
       },
     ],
   },
