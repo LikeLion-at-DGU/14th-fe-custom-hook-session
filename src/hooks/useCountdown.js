@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
-export const useCountdown = () => {
-  const animalDate = new Date("2026-08-25T00:00:00");
+const TARGET_DATE = new Date("2026-08-25T00:00:00");
 
+export const useCountdown = () => {
   const calculateTimeLeft = (animalDate) => {
     const dday = animalDate.getTime() - new Date().getTime();
 
@@ -17,15 +17,15 @@ export const useCountdown = () => {
 
     return { days, hours, minutes, seconds };
   };
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(animalDate));
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(TARGET_DATE));
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft(animalDate));
+      setTimeLeft(calculateTimeLeft(TARGET_DATE));
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [animalDate]);
+  }, []);
 
   return timeLeft;
 };
