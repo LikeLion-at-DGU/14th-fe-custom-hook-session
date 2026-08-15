@@ -138,9 +138,9 @@ const HomePage = () => {
           </CardDesc>
         </PracticeCard>
 
-        <PracticeCard onClick={() => handleButtonClick("/your-own-hook")}>
+        <PracticeCard onClick={() => handleButtonClick("/copy-feedback")}>
           <CardNumber>05</CardNumber>
-          <CardTitle>useSomething</CardTitle>
+          <CardTitle>useCopyFeedback</CardTitle>
           <CardDesc>
             나만의 멋진
             <br />
